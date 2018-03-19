@@ -1,0 +1,100 @@
+section.contact
+  background-image: url(../img/contact-bg.jpg)
+  background-size: cover
+  background-position: center
+  background-attachment: fixed
+  text-align: center
+  color: #fff
+  .overlay
+    padding: 30px 0 50px    
+    height: 100%
+    width: 100%
+    background: rgba(0, 0, 0, .8)
+  .heading
+    color: #fff
+  form
+    .holder
+      position: relative
+      max-width: 500px
+      height: 50px
+      margin: 0 auto
+      margin-bottom: 20px
+      padding: 10px
+      border: 1px solid #ccc
+      color: #666
+      &.message
+        height: 250px
+      &:last-child
+        margin-bottom: 0
+        border: 0
+        input
+          background: #109d59
+          transition: color .35s
+          outline: none
+          color: #fff
+        &:hover
+          input
+            color: #1f6e3e
+      label
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 2
+        text-align: left
+        padding-left: 10px
+        line-height: 50px
+        transition: transform .35s, color .35s ease-out
+        &.focus
+          transform: translateY(-35px)
+          color: #fff
+      input, textarea
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        padding: 10px
+        border: 0
+        resize: none
+  .social
+    display: flex
+    justify-content: space-between
+    text-align: center
+    width: 100%
+    height: 40px
+    margin-top: 50px
+    align-items: center
+    li
+      width: 100%
+      height: 100%
+      background: #fff
+      border-right: 1px solid #fff
+      &:first-child
+        background: #3b5998
+      &:nth-child(2)
+        position: relative
+        a
+          color: #ff0b00
+        &:before, &:after
+          content: ''
+          position: absolute
+          left: 0
+          right: 0
+          height: 3px
+          background: #ff0b00
+        &:before
+          top: 5px          
+        &:after
+          bottom: 5px
+
+      &:last-child
+        background: #55acee
+        border: 0
+      a
+        display: inline-block
+        width: 100%
+        height: 100%
+        line-height: 40px
+        color: #fff

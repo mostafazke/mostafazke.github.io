@@ -1,0 +1,24 @@
+section.contact#contact
+  .overlay
+    .container
+      h2.heading
+        |get touch
+      form
+        .holder
+          label(for="name") Name
+          input.field(type="text" name="name" id="name" required)
+        .holder
+          label(for="email") Email
+          input.field(type="email" name="email" id="email" required)
+        .holder.message
+          label(for="message") Message
+          textarea.field(name="message" id="message" required)
+        .holder
+          input(type="submit" value="SEND")
+      ul.social
+        li
+          a(href="https://www.facebook.com/mostafazke") Facebook
+        li
+          a(href="mailto:mostafazke@gmail.com") mostafazke@gmail.com
+        li
+          a(href="https://twitter.com/mostafazke") Twitter
