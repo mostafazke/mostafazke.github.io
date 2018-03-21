@@ -1593,40 +1593,17 @@ $('.field').on('blur', function () {
       $('label[for=' + $(this).attr("id") + ']').removeClass('focus');
   }
 });
-const lazyLoad = {
-	init: function() {
-		lazyLoad.whenInView()
-		lazyLoad.onClick()
-		lazyLoad.onScrollOrResize()
-	},
-	whenInView: function() {
-		$('img[data-src]').each(function(elementTop, elementBottom, screenTop, screenBottom) {
-			elementTop = $(this).offset().top - 100;
-			elementBottom = $(this).offset().top + $(this).innerHeight();
-			screenTop = $(window).scrollTop();
-			screenBottom = $(window).scrollTop() + $(window).innerHeight();
+function loadMore() {
+$('.project').slice(0, 6).fadeIn();  
+  $('.all-btn').on('click', e => {
+    if ($('.project:hidden').length > 0) {
+      e.preventDefault();
+      $('.project:hidden').slice(0, 6).fadeIn();
+    } else {
+        $('.all-btn').attr('href', '#sasa');
+      }
+  })
+}
+loadMore();
 
-			if ((screenBottom > screenTop) && (screenTop < elementBottom)) {
-				if ($(this).is(':visible')) {
-					$(this).attr('src', $(this).data('src')).removeAttr('data-src')
-				} else {
-					$(this).attr('src', $(this).data('src')).removeAttr('data-src')
-				}
-			}
-		})
-	},
-	onClick: function() {
-		$(document).click(function() {
-			setTimeout(function() {
-				lazyLoad.whenInView()
-			}, 400)
-		});
-	},
-	onScrollOrResize: function() {
-		$(window).on('scroll resize', function() {
-			lazyLoad.whenInView()
-		})
-	}
-};
-lazyLoad.init()
 });

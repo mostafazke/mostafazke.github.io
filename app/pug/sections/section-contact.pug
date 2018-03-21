@@ -14,11 +14,12 @@ section.contact#contact
           label(for="message") Message
           textarea.field(name="message" id="message" required)
         .holder
-          input(type="submit" value="SEND")
+          input(type="submit" value="SEND").stop-select
       ul.social
+        li.stop-select
+          a(href="https://www.facebook.com/mostafazke", target="_blank") Facebook
         li
-          a(href="https://www.facebook.com/mostafazke") Facebook
-        li
-          a(href="mailto:mostafazke@gmail.com") mostafazke@gmail.com
-        li
-          a(href="https://twitter.com/mostafazke") Twitter
+          a(href="mailto:mostafazke@gmail.com").email-cto mostafazke@gmail.com
+          a(href="tel:+21025440616").tel-cto +2 1025 440 616
+        li.stop-select
+          a(href="https://twitter.com/mostafazke", target="_blank") Twitter
