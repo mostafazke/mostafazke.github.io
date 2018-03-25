@@ -3,7 +3,7 @@ section.contact#contact
     .container
       h2.heading
         |get touch
-      form
+      form(action="https://formspree.io/mostafazke@gmail.com", method="post")
         .holder
           label(for="name") Name
           input.field(type="text" name="name" id="name" required)
@@ -12,7 +12,7 @@ section.contact#contact
           input.field(type="email" name="email" id="email" required)
         .holder.message
           label(for="message") Message
-          textarea.field(name="message" id="message" required)
+          textarea.field(name="git" id="message" required)
         .holder
           input(type="submit" value="SEND").stop-select
       ul.social
