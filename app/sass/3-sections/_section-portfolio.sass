@@ -20,6 +20,12 @@ section.portfolio
           transform: scale(1.2) rotate(3deg)     
         .desc
           background: rgba(0, 0, 0, 0.8)
+          &:before, &:after
+            transform: scaleY(1)
+          &:before
+            transition: transform .35s  .7s
+          &:after
+            transition: transform .35s 1.4s
           h2
             transform: translate(-50%, -80px)
           .info
@@ -27,7 +33,11 @@ section.portfolio
             transform: translate(-50%, -50%)
             transform: scale(1)
             &:before, &:after
-              transform: scaleY(1)     
+              transform: scaleY(1)   
+            &:before
+              transition: transform .35s .35s            
+            &:after
+              transition: transform .35s 1.05s  
       img
         position: absolute
         top: 0
@@ -42,7 +52,21 @@ section.portfolio
         top: 0
         left: 0
         bottom: 0
-        right: 0         
+        right: 0  
+        &:before, &:after
+          content: ''
+          position: absolute
+          left: 5%
+          right: 5%
+          height: 2px
+          background: #fff
+          transform: scaleX(0)
+        &:before
+          top: 5%
+          transform-origin: 0 100%
+        &:after
+          bottom: 5%
+          transform-origin: 100% 0
         h2
           position: absolute
           top: 50%
@@ -67,27 +91,20 @@ section.portfolio
           opacity: 0
           transform: scale(0)
           transition: opacity .35s, transform .35s
+          &:before, &:after
+            content: ''
+            position: absolute
+            top: 5%
+            bottom: 5%
+            width: 2px
+            background: #fff
+            transform: scaleY(0)
           &:before
-            content: ''
-            position: absolute
-            top: 5%
             left: 5%
-            bottom: 5%
-            width: 2px
-            background: #fff
-            transform: scaleY(0)
-            transition: transform .35s .35s
+            transform-origin: 0 100%
           &:after
-            content: ''
-            position: absolute
-            top: 5%
             right: 5%
-            bottom: 5%
-            width: 2px
-            background: #fff
-            transform: scaleY(0)
-            transition: transform .35s .35s
-
+            transform-origin: 100% 0
           p
             color: #fff
             width: 70%
