@@ -1,0 +1,426 @@
+/* Start Global Style */
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Times New Roman", Times, serif
+}
+a {
+	text-decoration: none
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.clear {
+    clear: both
+}
+
+.link-more {
+    float: right;
+    text-decoration: none;
+    color: #BA2E1F
+}
+
+
+/* End Global Style */
+
+.top-nav {
+    background-color: #BA2E1F;
+    padding: 10px 0
+}
+
+.top-nav .links {
+    float: left;
+    width: 50%;
+    padding: 5px 5px 5px 0;
+    margin: 0;
+}
+
+.top-nav .links li {
+    float: left;
+    list-style: none;
+    color: #fff
+}
+
+.top-nav .links li a {
+    color: #fff;
+    text-decoration: none
+}
+
+.top-nav .search {
+    float: right;
+    width: 50%;
+}
+
+.top-nav .search form {
+    float: right;
+    position: relative
+}
+
+.top-nav .search form input {
+    float: left;
+    border: 0;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.top-nav .search form button {
+    float: right;
+    background-color: #BA2E1F;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    right: 7px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+}
+
+
+/* Start Header */
+
+header {
+    padding: 20px 0;
+}
+
+header .brand {
+    float: left;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+header .brand h2 {
+    margin-bottom: 0;
+    font-size: 2rem
+}
+
+header .social {
+    float: right;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+header .social ul {
+    float: right;
+}
+
+header .social ul li {
+    float: left;
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    margin: 5px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .5s ease-in-out
+}
+
+header .social ul li:hover {
+    background-color: #FB8A3C;
+}
+
+header .social ul li a {
+    color: #fff
+}
+
+header .menu {
+    background-color: #333;
+    border-radius: 3px;
+}
+
+header .menu > ul {
+    float: right;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+header .menu > ul > li {
+    float: left;
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+header .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: .8em;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+}
+
+header .menu ul li a:hover {
+    color: #BA2E1F
+}
+
+header .menu .dropdown {
+    position: relative;
+}
+
+header .menu .dropdown:hover ul {
+    display: block
+}
+
+header .menu .dropdown ul:hover {
+    display: block
+}
+
+header .menu .dropdown ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    top: 28px;
+    left: 0;
+    padding: 5px 10px 10px;
+    width: 135px;
+}
+
+header .menu .dropdown ul li {
+    list-style: none;
+    padding: 5px;
+    margin-top: 5px;
+    transition: all .5s ease-in-out
+}
+
+header .menu .dropdown ul li:hover a {
+    color: #BA2E1F;
+    transition: all .5s ease-in-out
+}
+
+header .menu .dropdown ul li:hover {
+    padding-left: 12px;
+}
+
+article {
+    padding: 10px 0
+}
+
+article .article-img {
+    float: left;
+    width: 40%;
+}
+
+article .article-img img {
+    width: 100%;
+}
+
+article .article-body {
+    float: left;
+    width: 50%;
+    margin-left: 5%;
+}
+
+article .article-body h1 {
+    margin: 0;
+    margin-top: 2rem;
+    font-size: 5rem;
+}
+
+article .article-body p {
+    text-align: justify;
+    color: #676767
+}
+
+.about {
+    background-color: #F2F2F2;
+    padding: 20px 0
+}
+
+.about .part {
+    width: 30.66666666666667%;
+    float: left;
+    margin-right: 2%
+}
+
+.about .part:last-child {
+    margin-right: 0
+}
+
+.about .part h2 {
+    padding: 15px 0
+}
+
+.about .part img {
+    width: 100%
+}
+
+.about .part p {
+    color: #888;
+    padding-top: 5px
+}
+
+.about .part .service {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px
+}
+
+.about .part .service .service-img {
+    width: 30%;
+    float: left;
+}
+
+.about .part .service .service-img img {
+    width: 64px;
+    height: 64px;
+}
+
+.about .part .service .service-body {
+    float: right;
+    width: 70%
+}
+
+.about .part .service .service-body h3,
+.about .part .service .service-body p {
+    font-weight: normal;
+    margin: 0
+}
+
+.about .part .testimonial {
+    padding-bottom: 10px
+}
+
+.about .part .testimonial h3 {
+    color: #9A9A9A
+}
+
+.about .part .testimonial h3 i {
+    color: #D4D4D4;
+    font-size: 40px
+}
+
+.archives {
+    padding: 30px 0
+}
+
+.archives .archive {
+    float: left;
+    width: 23.5%;
+    margin-right: 2%;
+    border-top: 1px solid #222
+}
+
+.archives .archive:last-child {
+    margin-right: 0
+}
+
+.archives .archive h3 {
+    color: #555
+}
+
+.archives .archive .tweet p,
+.archives .archive .tweet span {
+    color: #555;
+    margin-bottom: 0
+}
+
+.archives .archive .tweet p a {
+    color: #BA2E1F
+}
+
+.archives .archive ul {
+    list-style: none;
+    padding: 0
+}
+
+.archives .archive ul li {
+    border-bottom: 1px solid #aaa;
+    padding: 7px 0
+}
+
+.archives .archive ul li a {
+    color: #333;
+    text-decoration: none
+}
+
+.archives .archive .post {
+    padding-bottom: 10px
+}
+
+.archives .archive .post h4 {
+    color: #555;
+    margin-bottom: 0
+}
+
+.archives .archive .post span {
+    font-size: .9em;
+}
+
+.archives .archive .post span a {
+    color: #BA2E1F
+}
+
+.archives .archive .post p {
+    color: #aaa;
+    margin: 10px 0
+}
+
+.archives .archive form input,
+.archives .archive form textarea {
+    border: 0;
+    background-color: #F2F2F2;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    outline: 0;
+    width: 100%
+}
+
+.archives .archive form textarea {
+    resize: none;
+    height: 100px
+}
+
+.archives .archive form input[type=submit] {
+    color: #BA2E1F;
+    width: 50%
+}
+
+footer {
+    background-color: #F2F2F2;
+    padding: 20px 0;
+    color: #aaa;
+    font-size: .8em
+}
+
+footer .copyright {
+    float: left;
+    text-align: left;
+    width: 50%
+}
+
+footer .Designer {
+    float: right;
+    text-align: right;
+    width: 50%
+}

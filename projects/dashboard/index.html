@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- Start Header -->
+    <header>
+        <div class="logo">
+            <a href="#">zero</a>
+        </div>
+        <div class="user">
+            <div class="header-f">
+                <form>
+                    <input type="search" placeholder="Search here" />
+                    <button><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="options">
+                <div class="option">
+                    <a href="#"><i class="fa fa-user"></i></a>
+                </div>
+                <div class="option">
+                    <span>5</span>
+                    <a href="#"><i class="fa fa-bell-o"></i></a>
+                </div>
+                <div class="option">
+                    <span>2</span>
+                    <a href="#"><i class="fa fa-envelope-o"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Navbar -->
+    <nav>
+        <a href="#" title="Website"><span>0</span></a>
+        <a href="#" title="Dashboard"><i class="fa fa-dashboard"></i></a>
+        <a href="#" title="Charts"><i class="fa fa-bar-chart-o"></i></a>
+        <a href="#" title="Calendar &amp; Events"><i class="fa fa-calendar-o"></i></a>
+        <a href="#" title="Breifcase"><i class="fa fa-briefcase"></i></a>
+        <a href="#" title="Tables"><i class="fa fa-table"></i></a>
+        <a href="#" title="Forms"><i class="fa fa-edit"></i></a>
+        <a href="#" title="Settings"><i class="fa fa-gear"></i></a>
+        <a href="#" title="Emails"><i class="fa fa-wechat"></i></a>
+        <a href="#" title="Projects"><i class="fa fa-tv"></i></a>
+        <a href="#" title="Downloads"><i class="fa fa-download"></i></a>
+        <a href="#" title="Window"><i class="fa fa-sticky-note-o"></i></a>
+        <a href="#" title="Chat"><i class="fa fa-commenting-o"></i></a>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Start Main Section -->
+    <main class="main">
+        <div class="container">
+            <section class="Stats">
+                <div class="header">
+                    <h3>User Stats</h3>
+                    <a href="#"><i class="fa fa-close"></i></a>
+                </div>
+                <div class="body">
+                    <div id="chartContainer" style="height: 350px; width: 100%;"></div>
+
+                </div>
+            </section>
+            <section class="user-cart">
+                <div class="user-image">
+                    <img src="images/face.jpg" alt="Person" />
+                </div>
+                <div class="user-info">
+                    <h2>Jenifer Cambridge</h2>
+                    <h3>UI / UX Designer</h3>
+                    <p>I am a passionate and hard working Ui / UX designer and web developer. Please visit my profile for more information about me.</p>
+                    <div class="user-links">
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+                <button>view profile</button>
+            </section>
+        </div>
+        <div class="container">
+            <section class="circle">
+                <div class="circle-percent">
+                    <div id="circle1"><span>75%</span></div>
+                </div>
+                <div class="circle-info">
+                    <h3>Monthly sales</h3>
+                    <span>1234</span>
+                </div>
+            </section>
+            <section class="circle">
+                <div class="circle-percent">
+                    <div id="circle2"><span>45%</span></div>
+                </div>
+                <div class="circle-info">
+                    <h3>Monthly Users</h3>
+                    <span>545</span>
+                </div>
+            </section>
+            <section class="circle">
+                <div class="circle-percent">
+                    <div id="circle3"><span>75%</span></div>
+                </div>
+                <div class="circle-info">
+                    <h3>Monthly products</h3>
+                    <span>1023</span>
+                </div>
+            </section>
+            <section class="circle">
+                <div class="circle-percent">
+                    <div id="circle4"><span>45%</span></div>
+                </div>
+                <div class="circle-info">
+                    <h3>Monthly profit</h3>
+                    <span>1356</span>
+                </div>
+            </section>
+        </div>
+        <div class="container">
+            <section class="currency">
+                <div class="header">
+                    <h3>Currency Rates</h3>
+                    <a href="#"><i class="fa fa-close"></i></a>
+                </div>
+                <div class="body">
+                    <table>
+                        <tr>
+                            <td>EUR / USD</td>
+                            <td>1.71523</td>
+                            <td>0.71523</td>
+                            <td><i class="fa fa-chevron-up up"></i></td>
+                        </tr>
+                        <tr>
+                            <td>USD / CAD</td>
+                            <td>0.88748</td>
+                            <td>0.38748</td>
+                            <td><i class="fa fa-chevron-down down"></i></td>
+                        </tr>
+                        <tr>
+                            <td>USD / JPY</td>
+                            <td>1.06365</td>
+                            <td>1.36365</td>
+                            <td><i class="fa fa-chevron-up up"></i></td>
+                        </tr>
+                        <tr>
+                            <td>GBP / USD</td>
+                            <td>138.890</td>
+                            <td>158.840</td>
+                            <td><i class="fa fa-chevron-down down"></i></td>
+                        </tr>
+                        <tr>
+                            <td>USD / CHF</td>
+                            <td>0.94975</td>
+                            <td>2.93923</td>
+                            <td><i class="fa fa-chevron-up up"></i></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section class="progress">
+                <div class="header">
+                    <h3>Tasks Completion</h3>
+                    <a href="#"><i class="fa fa-close"></i></a>
+                </div>
+                <div class="body">
+                    <div class="prog">
+                        <h3>Monthly Purchase Report</h3>
+                        <div><span>75% Complete</span></div>
+                    </div>
+                    <div class="prog">
+                        <h3>Meetings Preparations</h3>
+                        <div><span>50% Complete</span></div>
+                    </div>
+                    <div class="prog">
+                        <h3>Prepare To do list</h3>
+                        <div><span>65% Complete</span></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </section>
+        </div>
+        <div class="container">
+            <section class="chat">
+                <div class="header">
+                    <h3>Recent Chat</h3>
+                    <a href="#"><i class="fa fa-close"></i></a>
+                </div>
+                <div class="body">
+                    <div class="message">
+                        <div class="msg-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada bibendum orcitis nis. </p>
+                        </div>
+                        <div class="msg-date">
+                            <h4>10:20, 22 January, 2016</h4>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="msg-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada bibendum orcitis nis. </p>
+                        </div>
+                        <div class="msg-date">
+                            <h4>10:20, 22 January, 2016</h4>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="msg-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada bibendum orcitis nis. </p>
+                        </div>
+                        <div class="msg-date">
+                            <h4>10:20, 22 January, 2016</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="activity">
+                <div class="header">
+                    <h3>Client Activity</h3>
+                    <a href="#"><i class="fa fa-close"></i></a>
+                </div>
+                <div class="body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Client Name</td>
+                                <td>Organization</td>
+                                <td>Purchase</td>
+                                <td>Sales</td>
+                                <td>Profit</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Adam Smith</td>
+                                <td>Amenci United Pvt. Ltd.</td>
+                                <td>1,233</td>
+                                <td>1,123</td>
+                                <td>20%</td>
+                            </tr>
+                            <tr>
+                                <td>Alan Mance</td>
+                                <td>HP Pharma Ltd.</td>
+                                <td>1,421</td>
+                                <td>1,234</td>
+                                <td>40%</td>
+                            </tr>
+                            <tr>
+                                <td>Lisa Gray</td>
+                                <td>LT Infotech Pvt. Ltd</td>
+                                <td>2,543</td>
+                                <td>2,000</td>
+                                <td>30%</td>
+                            </tr>
+                            <tr>
+                                <td>Hemina Milon</td>
+                                <td>Hemina Supplies Ltd.</td>
+                                <td>7,343</td>
+                                <td>6,875</td>
+                                <td>60%</td>
+                            </tr>
+                            <tr>
+                                <td>Simba Singh</td>
+                                <td>Singh Corporation</td>
+                                <td>1,876</td>
+                                <td>1,234</td>
+                                <td>80%</td>
+                            </tr>
+                            <tr>
+                                <td>Peter Jason</td>
+                                <td>Jason &amp; Sons Pvt. Ltd.</td>
+                                <td>5,235</td>
+                                <td>3,654</td>
+                                <td>50%</td>
+                            </tr>
+                            <tr>
+                                <td>Shiva Walce</td>
+                                <td>Walce Indoors Ltd.</td>
+                                <td>3,345</td>
+                                <td>2,421</td>
+                                <td>70%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+        <div class="container">
+            <section class="overview">
+                <div class="header">
+                    <h3>Project Overview</h3>
+                    <a href="#"><i class="fa fa-close"></i></a>
+                </div>
+                <div class="body">
+                    <div class="pie-chart">
+                        <div id="pie-chart" style="height: 300px; width: 100%;"></div>
+                        <h3>400</h3>
+                        <span>Projects</span>
+                    </div>
+                    <div class="pie-info">
+                        <h3>Projects in 2015</h3>
+                        <p>A breakdown of yearly projects euismod vel tempus vulputate.</p>
+                        <ul>
+                            <li>Jan 2015 - Mar 2015</li>
+                            <li>Mar 2015 - May 2015</li>
+                            <li>May 2015 - Jul 2015</li>
+                            <li>Jul 2015 -Sep 2015</li>
+                            <li>Sep 2015 - Dec 2015</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="news">
+                <div class="header">
+                    <h3>News Board</h3>
+                    <a href="#"><i class="fa fa-close"></i></a>
+                </div>
+                <div class="body">
+                    <div class="item">
+                        <img src="images/1.jpg" alt="news" />
+                        <h3>Vestibulum ultricies, arcu nec fringilla pretium</h3>
+                        <p>Mauris a ante ac neque vulputate vehicula. Nulla vitae sapien nunc. sapien lacus pharetra turpis, eget porttitor odio velit ac metus.</p>
+                        <a class="left" href="#"><i class="fa fa-chevron-left"></i></a>
+                        <a class="right" href="#"><i class="fa fa-chevron-right"></i></a>
+                    </div>
+                    <hr>
+                    <div class="item">
+                        <img src="images/2.jpg" alt="news" />
+                        <h3>Vestibulum ultricies, arcu nec fringilla pretium</h3>
+                        <p>Mauris a ante ac neque vulputate vehicula. Nulla vitae sapien nunc. sapien lacus pharetra turpis, eget porttitor odio velit ac metus.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container">
+            <section class="calender">
+                <div class="header">
+                    <h3>Calendar &amp; Events</h3>
+                    <a href="#"><i class="fa fa-close"></i></a>
+                </div>
+                <div class="body">
+                    <table class="cal">
+                        <caption>
+                            <span class="prev"><a href="#">2014</a></span>
+                            <span class="next"><a href="#">2016</a></span> June, 2015
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                                <th>Sun</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">26</a></td>
+                                <td><a href="#">27</a></td>
+                                <td><a href="#">28</a></td>
+                                <td><a href="#">29</a></td>
+                                <td><a href="#">30</a></td>
+                                <td><a href="#">31</a></td>
+                                <td><a href="#">1</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">2</a></td>
+                                <td><a href="#">3</a></td>
+                                <td><a href="#">4</a></td>
+                                <td><a href="#">5</a></td>
+                                <td><a href="#">6</a></td>
+                                <td><a href="#">7</a></td>
+                                <td><a href="#">8</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">9</a></td>
+                                <td><a href="#">10</a></td>
+                                <td><a href="#">11</a></td>
+                                <td><a href="#">12</a></td>
+                                <td><a href="#">13</a></td>
+                                <td><a href="#">14</a></td>
+                                <td><a href="#">15</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">16</a></td>
+                                <td><a href="#">17</a></td>
+                                <td><a href="#">18</a></td>
+                                <td><a href="#">19</a></td>
+                                <td><a href="#">20</a></td>
+                                <td><a href="#">21</a></td>
+                                <td><a href="#">22</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">23</a></td>
+                                <td><a href="#">24</a></td>
+                                <td><a href="#">25</a></td>
+                                <td><a href="#">26</a></td>
+                                <td><a href="#">27</a></td>
+                                <td class="active"><a href="#">28</a></td>
+                                <td><a href="#">29</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">30</a></td>
+                                <td><a href="#">31</a></td>
+                                <td><a href="#">1</a></td>
+                                <td><a href="#">2</a></td>
+                                <td><a href="#">3</a></td>
+                                <td><a href="#">4</a></td>
+                                <td><a href="#">5</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="events">
+                        <h3 class="title">EVENTS</h3>
+                        <h3>TEAM MEETING</h3>
+                        <h3>CLIENT’S MEETING</h3>
+                        <h3>FRANK’S BIRTHDAY</h3>
+                        <div class="links">
+                            <a href="#" class="edit">EDIT</a>
+                            <a href="#" class="add">ADD</a>
+                        </div>
+                    </div>
+                    <a href="#" class="see">SEE PLANNED EVENTS</a>
+                    <a href="#" class="set">SET REMINDER</a>
+                </div>
+            </section>
+            <section class="contact">
+                <div class="header">
+                    <h3>Calendar &amp; Events</h3>
+                    <a href="#"><i class="fa fa-close"></i></a>
+                </div>
+                <div class="body">
+                    <form>
+                        <label>Name</label>
+                        <input type="text" />
+                        <label>Email</label>
+                        <input type="email" />
+                        <label>Complain Type</label>
+                        <select>
+                            <option>Question</option>
+                            <option>Advice</option>
+                            <option>Member</option>
+                            <option>Good</option>
+                        </select>
+                        <label>Message</label>
+                        <textarea></textarea>
+                        <input type="submit" value="SEND" />
+                    </form>
+                    <div class="clear"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- End Main Section -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/canvasjs.min.js"></script>
+    <script src="js/circle-progress.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
