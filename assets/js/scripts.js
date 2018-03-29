@@ -1606,7 +1606,7 @@ $('.project').slice(0, 6).fadeIn();
       e.preventDefault();
       $('.project:hidden').slice(0, 6).fadeIn();
     } else {
-        $('.all-btn').attr('href', 'new portfolio site');
+        $('.all-btn').attr('href', '#');
       }
   })
 }
