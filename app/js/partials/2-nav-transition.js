@@ -1,5 +1,5 @@
 $('.top-nav .menu a, .read-more-btn-holder a').on('click', function (e) {
-    e.preventDefault();    
+    e.preventDefault();
     console.log($(this).attr('href'));
     $(this).parent().addClass('active').siblings().removeClass('active');
     if ($(this).attr('href') !== '#') {

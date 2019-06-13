@@ -1549,7 +1549,7 @@ return a.$===r&&(a.$=Wb), b&&a.jQuery===r&&(a.jQuery=Vb), r;}, b||(a.jQuery=a.$=
 $(document).ready(function(){
 
 $('.top-nav .menu a, .read-more-btn-holder a').on('click', function (e) {
-    e.preventDefault();    
+    e.preventDefault();
     console.log($(this).attr('href'));
     $(this).parent().addClass('active').siblings().removeClass('active');
     if ($(this).attr('href') !== '#') {
@@ -1600,14 +1600,13 @@ $('.field').on('blur', function () {
     };
 });
 function loadMore() {
-$('.project').slice(0, 6).fadeIn();  
+$('.project').slice(0, 6).fadeIn();
   $('.all-btn').on('click', e => {
-    if ($('.project:hidden').length > 0) {
-      e.preventDefault();
-      $('.project:hidden').slice(0, 6).fadeIn();
-    } else {
-        $('.all-btn').attr('href', '#');
-      }
+    e.preventDefault();
+    $('.project:hidden').slice(0, 6).fadeIn();
+    if ($('.project:hidden').length === 0) {
+      $('.all-btn').hide();
+    }
   })
 }
 loadMore();
