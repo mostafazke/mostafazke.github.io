@@ -13,6 +13,6 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   
-  output: "static",
   site: 'https://mostafazke.github.io',
+  base: '/',
 });
