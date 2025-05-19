@@ -13,6 +13,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   
-  site: 'https://mostafazke.github.io',
-  base: '/',
+  site: 'https://mostafazke.github.io'
 });
