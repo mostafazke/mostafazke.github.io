@@ -1,0 +1,71 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/layout/Header.astro";
+import Hero from "@/components/sections/Hero.tsx";
+import Projects from "@/components/sections/Projects.tsx";
+import Footer from "@/components/layout/Footer.astro";
+import Experience from "@/components/sections/Experience";
+import Skills from "@/components/sections/Skills";
+import Contact from "@/components/sections/Contact";
+---
+
+<Layout title="Mostafa Zaki - Portfolio">
+  <Header />
+  <main class="min-h-screen">
+    <Hero client:only="react" />
+    <section id="experience" class="pt-8">
+      <Experience client:only="react" />
+    </section>
+    <section id="projects" class="pt-8">
+      <Projects client:only="react" />
+    </section>
+    <section id="skills" class="pt-8">
+      <Skills client:only="react" />
+    </section>
+    <section id="contact" class="pt-8">
+      <Contact client:only="react" />
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = e.currentTarget as HTMLAnchorElement;
+      const targetId = target.getAttribute("href")?.substring(1) || "";
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("nav a[href^='#']");
+    const observerOptions = { threshold: 0.6 };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => link.classList.remove("text-foreground"));
+          const id = entry.target.getAttribute("id");
+          const activeLink = document.querySelector(`nav a[href="#${id}"]`);
+          if (activeLink) {
+            activeLink.classList.add("text-foreground");
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+    sections.forEach((section) => observer.observe(section));
+  });
+</script>

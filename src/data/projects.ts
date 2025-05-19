@@ -1,0 +1,60 @@
+export const projects = [
+  {
+    title: "Farabi AI",
+    description:
+      "A React app for OCR, summarization, translation, and AI-powered document chat.",
+    status: "In Progress",
+    tech: ["React", "TypeScript", "React Query", "Bootstrap", "Figma"],
+    image: "/projects/farabi-ai.png",
+    fullImage: "/projects/farabi-ai.png",
+    preview: "https://demo.farabi.ai/",
+  },
+  {
+    title: "NG Whiteboard",
+    description:
+      "A modular Angular library for freehand drawing with optional UI components. Tree-shakable and extensible.",
+    status: "In Progress",
+    tech: ["Angular", "TypeScript", "SVG"],
+    image: "/projects/ng-whiteboard.png",
+    fullImage: "/projects/ng-whiteboard.png",
+    link: "https://github.com/mostafazke/ng-whiteboard",
+    preview: "https://mostafazke.github.io/ng-whiteboard",
+  },
+  {
+    title: "Buzzdiggr",
+    description: "Social media analytics platform with real-time dashboards.",
+    status: "Delivered",
+    tech: ["Angular", "NgRx", "TypeScript", "Sass", "Docker"],
+    image: "/projects/buzzdiggr.png",
+    fullImage: "/projects/buzzdiggr.png",
+    preview: "https://appsource.microsoft.com/en-us/product/web-apps/in3technology.buzzdiggr",
+  },
+  {
+    title: "Tarasol",
+    description: "Government correspondence system with PWA support.",
+    status: "Delivered",
+    tech: ["Angular", "Nest.js", "Material UI", "RxJS"],
+    image: "/projects/tarasol.png",
+    fullImage: "/projects/tarasol.png",
+    preview: "https://demo.tarasolcms.com",
+  },
+  {
+    title: "B-Care",
+    description: "Insurance broker platform migrated to Angular.",
+    status: "Delivered",
+    tech: ["Angular", "TypeScript", "Bootstrap", "Webpack"],
+    image: "/projects/project-96.gif",
+    fullImage: "/projects/project-96-full.gif",
+    preview: "https://www.bcare.com.sa",
+  },
+  {
+    title: "Weather App",
+    description: "Simple weather application using jQuery.",
+    status: "Ready",
+    tech: ["HTML", "CSS", "jQuery"],
+    image: "/projects/project-97.gif",
+    fullImage: "/projects/project-97-full.gif",
+    link: "https://codepen.io/mostafazke/pPJwmK/",
+    preview: "https://codepen.io/mostafazke/full/pPJwmK/",
+  }
+];

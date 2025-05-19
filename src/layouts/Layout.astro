@@ -1,0 +1,148 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mostafa Zaki</title>
+    <meta
+      name="keywords"
+      content="Mostafa Zaki,Front-end engineering,Portfolio,Web development,Html,Css,JavaScript,Angular,React,Web Design"
+    />
+    <meta
+      name="description"
+      content="Mostafa Zaki's personal website showcasing his skills and projects as a senior front-end engineer. Discover his portfolio and blog posts on web development, Angular, and more."
+    />
+    <meta name="subject" content="Front-end web developer Portfolio" />
+    <meta name="language" content="en" />
+    <meta name="author" content="Mostafa Zaki" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#2c3e50" />
+    <meta
+      name="msapplication-TileImage"
+      content="/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#2c3e50" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL1C3WMWD4"
+    ></script>
+    <script>
+      // @ts-ignore: Add dataLayer property to window for Google Analytics
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        // @ts-ignore: Add dataLayer property to window for Google Analytics
+        window.dataLayer.push(arguments);
+      }
+      // @ts-ignore: Add dataLayer property to window for Google Analytics
+      gtag("js", new Date());
+
+      // @ts-ignore: Add dataLayer property to window for Google Analytics
+      gtag("config", "G-RL1C3WMWD4");
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-background font-sans antialiased selection:bg-purple-500/20 selection:text-purple-500"
+  >
+    <div
+      class="fixed inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+    >
+    </div>
+    <slot />
+  </body>
+</html>
+
+<script is:inline>
+  const getThemePreference = () => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+  const isDark = getThemePreference() === "dark";
+  document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+  if (typeof localStorage !== "undefined") {
+    const observer = new MutationObserver(() => {
+      const isDark = document.documentElement.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  }
+</script>
