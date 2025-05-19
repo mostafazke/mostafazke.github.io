@@ -1,16 +1,40 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-export default function MobileMenu({ navItems }) {
+type NavItem = {
+  key: string;
+  label: string;
+  icon?: React.ReactNode;
+};
+
+interface MobileMenuProps {
+  navItems: NavItem[];
+}
+
+export default function MobileMenu({ navItems }: MobileMenuProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleMenu = () => setIsMenuOpen((open) => !open);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isMenuOpen]);
 
   return (
-    <>
+    <div className="mobile-menu-container" ref={containerRef}>
       <motion.button
         className="md:hidden p-2 text-foreground"
-        onClick={toggleMenu}
+        onClick={() => setIsMenuOpen((open) => !open)}
         aria-label="Toggle menu"
         whileTap={{ scale: 0.95 }}
       >
@@ -31,7 +55,6 @@ export default function MobileMenu({ navItems }) {
                   key={item.key}
                   href={`#${item.key}`}
                   className="transition-colors hover:text-foreground/80 text-foreground/60 py-2"
-                  onClick={toggleMenu}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2, delay: index * 0.1 }}
@@ -43,6 +66,6 @@ export default function MobileMenu({ navItems }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }

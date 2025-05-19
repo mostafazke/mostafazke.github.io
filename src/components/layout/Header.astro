@@ -26,7 +26,9 @@ const navItems = [
       MO
     </motion.a>
 
-    <nav class="hidden md:flex items-center space-x-6 text-sm font-medium  text-foreground/60">
+    <nav
+      class="hidden md:flex items-center space-x-6 text-sm font-medium text-foreground/60"
+    >
       {
         navItems.map((item) => (
           <a
@@ -41,7 +43,7 @@ const navItems = [
 
     <div class="flex items-center space-x-2">
       <ThemeIcon />
-      <MobileMenu navItems={navItems} />
+      <MobileMenu client:load navItems={navItems} />
     </div>
   </div>
 </header>

@@ -130,6 +130,7 @@ export default function Hero() {
                 alt="Profile"
                 className="w-48 md:w-60 rounded-full relative ring-2 ring-purple-500/50"
                 style={{ objectFit: "cover" }}
+                draggable="false"
               />
             </div>
           </motion.div>
